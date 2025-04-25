@@ -60,14 +60,6 @@
             bindings = <&kp FSLH>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        
-        // Swapper implementation for ZMK (application switcher)
-        tri_switch: tri_switch {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            ignored-key-positions = <>;
-        };
     };
 
     // Macros
@@ -77,6 +69,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp J &kp A &kp N &kp N &kp I &kp K &kp AT &kp F &kp E &kp U &kp E &kp R &kp DOT &kp D &kp E &kp V>;
+        };
+        
+        // Application switcher macro
+        app_switch: app_switch {
+            label = "app_switcher";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp TAB>, <&macro_pause_for_release>, <&macro_release &kp LGUI>;
         };
     };
 
@@ -141,7 +141,7 @@ label= "NAV"                              ;
 
                 &trans      &trans      &trans      &trans      &trans          &trans      &kp LC(GRAVE) &kp UP     &trans      &trans
                 &trans      &trans      &trans      &trans      &trans          &trans      &kp LEFT     &kp DOWN    &kp RIGHT   &trans
-    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &tri_switch  &kp LG(LBRC) &kp LG(RBRC) &trans &trans
+    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &app_switch  &kp LG(LBRC) &kp LG(RBRC) &trans &trans
                                         &trans      &trans      &trans          &trans      &trans       &trans
             >;
         };
