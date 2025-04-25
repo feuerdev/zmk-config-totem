@@ -175,10 +175,10 @@ label= "NAV"                              ;
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp N7      &kp N8      &kp N9      &kp PLUS    &kp STAR        &bt BT_CLR  &bt BT_PRV  &bt BT_NXT  &out OUT_TOG &sys_reset
-                &kp N4      &kp N5      &kp N6      &kp MINUS   &kp FSLH        &trans      &trans      &trans      &trans      &bootloader
-    &trans      &kp N1      &kp N2      &kp N3      &kp EQUAL   &kp DOT         &trans      &trans      &trans      &trans      &trans &trans
-                                        &kp N0      &trans      &trans          &trans      &trans      &trans
+                &trans      &kp N7      &kp N8      &kp N9      &trans           &bt BT_CLR  &bt BT_PRV  &bt BT_NXT  &out OUT_TOG &sys_reset
+                &trans      &kp N4      &kp N5      &kp N6      &trans           &trans      &trans      &trans      &trans      &bootloader
+    &trans      &trans      &kp N1      &kp N2      &kp N3      &trans           &trans      &trans      &trans      &trans      &trans &trans
+                                        &kp N0      &trans      &trans           &trans      &trans      &trans
             >;
         };
     };
