@@ -40,21 +40,21 @@
 / {
     // Custom shift key implementation for ZMK
     behaviors {
-        comma_morph: comma_morph {
+        mo_comma: mo_comma {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         
-        dot_morph: dot_morph {
+        mo_dot: mo_dot {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp QMARK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         
-        slash_morph: slash_morph {
+        mo_slash: mo_slash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp BSLH>;
@@ -118,7 +118,7 @@ bindings = <
 
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp MINUS
                 &mt LSHFT A &mt LCTRL R &mt LALT S  &mt LGUI T  &kp G           &kp M       &mt RGUI N  &mt RALT E  &mt RCTRL I &mt RSHFT O
-    &trans      &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &comma_morph &dot_morph &slash_morph &trans
+    &trans      &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &trans
                                         &mt LALT ESC &lt SYM SPACE &mt LGUI TAB  &mt LCTRL RET &lt NAV BSPC &lt FUNC DEL
             >;
         };
