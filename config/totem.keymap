@@ -119,7 +119,7 @@ bindings = <
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp MINUS
                 &mt LSHFT A &mt LCTRL R &mt LALT S  &mt LGUI T  &kp G           &kp M       &mt RGUI N  &mt RALT E  &mt RCTRL I &mt RSHFT O
     &trans      &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &trans
-                                        &mt LALT ESC &lt NAV SPACE &mt LGUI TAB &lt NUM RET &lt SYM BSPC &lt FUNC DEL
+                                        &kp ESC     &lt NAV SPACE &mt LGUI TAB  &lt NUM RET &lt SYM BSPC &lt FUNC DEL
             >;
         };
 
