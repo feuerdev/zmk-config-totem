@@ -162,9 +162,9 @@ label= "SYM"                              ;
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp BSLH    &kp LT      &kp GT      &kp STAR    &trans          &kp AMPS    &kp GRAVE   &kp LBKT    &kp RBKT    &kp PRCNT
-                &kp TILDE   &kp MINUS   &kp PLUS    &kp EQUAL   &kp HASH        &kp PIPE    &kp COLON   &kp LPAR    &kp RPAR    &kp SEMI
-    &trans      &kp CARET   &kp FSLH    &kp DQT     &kp SQT     &kp LA(U)       &email      &kp DLLR    &kp LBRC    &kp RBRC    &kp AT  &trans
+                &kp CARET   &kp DQT     &kp DLLR    &kp PRCNT   &kp AMPS        &trans      &kp LBKT    &kp RBKT    &kp GRAVE   &trans
+                &kp STAR    &kp MINUS   &kp PLUS    &kp EQUAL   &kp HASH        &kp PIPE    &kp LPAR    &kp RPAR    &kp AT      &kp SQT
+    &email      &kp LT      &kp GT      &trans      &trans      &kp LA(U)       &kp TILDE   &kp LBRC    &kp RBRC    &kp SEMI    &kp COLON &trans
                                         &trans      &trans      &trans          &trans      &trans      &trans
             >;
         };
