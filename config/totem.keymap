@@ -178,7 +178,7 @@ label= "NAV"                              ;
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &trans      &trans      &trans      &trans      &trans          &trans      &kp LC(GRAVE) &kp UP     &trans      &trans
+                &trans      &trans      &trans      &trans      &trans          &trans      &kp LG(GRAVE) &kp UP     &trans      &trans
                 &trans      &trans      &trans      &trans      &trans          &trans      &kp LEFT     &kp DOWN    &kp RIGHT   &trans
     &trans      &trans      &trans      &trans      &trans      &trans          &trans      &app_switch  &kp LG(LBRC) &kp LG(RBRC) &trans &trans
                                         &trans      &trans      &trans          &trans      &trans       &trans
