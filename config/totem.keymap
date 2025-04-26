@@ -167,21 +167,21 @@ bindings = <
 label= "NAV"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃ SWITCH WIN┃     UP    ┃           ┃           ┃
+//             ┃  HYPER(Q) ┃  HYPER(W) ┃  HYPER(F) ┃  HYPER(P) ┃  HYPER(B) ┃   ┃           ┃ SWITCH WIN┃     UP    ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃  LEFT     ┃   DOWN    ┃   RIGHT   ┃           ┃
+//             ┃  HYPER(A) ┃  HYPER(R) ┃  HYPER(S) ┃  HYPER(T) ┃  HYPER(G) ┃   ┃           ┃  LEFT     ┃   DOWN    ┃   RIGHT   ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃ SWITCH APP┃ SWITCH TAB┃ SWITCH TAB┃           ┃           ┃
+// ┃           ┃  HYPER(Z) ┃  HYPER(X) ┃  HYPER(C) ┃  HYPER(D) ┃  HYPER(V) ┃   ┃           ┃ SWITCH APP┃ SWITCH TAB┃ SWITCH TAB┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &trans      &trans      &trans      &trans      &trans          &trans      &kp LG(GRAVE) &kp UP     &trans      &trans
-                &trans      &trans      &trans      &trans      &trans          &trans      &kp LEFT     &kp DOWN    &kp RIGHT   &trans
-    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &app_switch  &kp LG(LBRC) &kp LG(RBRC) &trans &trans
-                                        &trans      &trans      &trans          &trans      &trans       &trans
+                &kp LS(LC(LA(LG(Q)))) &kp LS(LC(LA(LG(W)))) &kp LS(LC(LA(LG(F)))) &kp LS(LC(LA(LG(P)))) &kp LS(LC(LA(LG(B))))          &trans      &kp LG(GRAVE) &kp UP     &trans      &trans
+                &kp LS(LC(LA(LG(A)))) &kp LS(LC(LA(LG(R)))) &kp LS(LC(LA(LG(S)))) &kp LS(LC(LA(LG(T)))) &kp LS(LC(LA(LG(G))))          &trans      &kp LEFT     &kp DOWN    &kp RIGHT   &trans
+    &trans      &kp LS(LC(LA(LG(Z)))) &kp LS(LC(LA(LG(X)))) &kp LS(LC(LA(LG(C)))) &kp LS(LC(LA(LG(D)))) &kp LS(LC(LA(LG(V))))          &trans      &app_switch  &kp LG(LBRC) &kp LG(RBRC) &trans &trans
+                                                                                            &trans      &trans      &trans             &trans      &trans       &trans
             >;
         };
 
