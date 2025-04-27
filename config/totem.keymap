@@ -99,6 +99,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         
+        // Colon/Semicolon mod-morph (reversed: colon is default, semicolon when shifted)
+        mo_colon: mo_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        
         // Number row hold-tap
         ht_num: hold_tap_number {
             compatible = "zmk,behavior-hold-tap";
@@ -205,7 +213,7 @@ label= "BASE"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃  LSFT(A)  ┃  LCTRL(R) ┃  LALT(S)  ┃  LGUI(T)  ┃     G     ┃   ┃     M     ┃  LGUI(N)  ┃  LALT(E)  ┃  LCTRL(I) ┃  LSHFT(O) ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃     ;     ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃     '     ┃
+// ┃     :     ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃     '     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃    HYPR   ┃  NAV(SPC) ┃    TAB    ┃   ┃  NUM(RET) ┃ SYM(BSPC) ┃ FUNC(DEL) ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -214,7 +222,7 @@ bindings = <
 
                 &ht_num N1 Q &ht_num N2 W &ht_num N3 F &ht_num N4 P &ht_num N5 B   &ht_num N6 J &ht_num N7 L &ht_num N8 U &ht_num N9 Y &ht_num N0 MINUS
                 &hml LSHFT A &hml LCTRL R &hml LALT S &hml LGUI T &kp G         &kp M       &hmr LGUI N &hmr LALT E &hmr LCTRL I &hmr LSHFT O
-    &kp SEMI    &kp Z       &kp X        &kp C       &kp D       &kp V          &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
+    &mo_colon   &kp Z       &kp X        &kp C       &kp D       &kp V          &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
                                &kp LS(LC(LA(LGUI))) &lt NAV SPACE &kp TAB       &lt NUM RET &lt SYM BSPC &lt FUNC DEL
             >;
         };
