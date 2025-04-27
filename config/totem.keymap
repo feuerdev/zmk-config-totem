@@ -113,6 +113,31 @@
             bindings = <&kp FSLH>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        
+        // Tap dances for copy/cut/paste
+        td_copy: tap_dance_copy {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_COPY";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C>, <&kp LC(C)>;
+        };
+        
+        td_cut: tap_dance_cut {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CUT";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp X>, <&kp LC(X)>;
+        };
+        
+        td_paste: tap_dance_paste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_PASTE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp V>, <&kp LC(V)>;
+        };
     };
 
     // Macros
@@ -177,7 +202,7 @@ bindings = <
 
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp MINUS
                 &hml LSHFT A &hml LCTRL R &hml LALT S &hml LGUI T &kp G         &kp M       &hmr LGUI N &hmr LALT E &hmr LCTRL I &hmr LSHFT O
-    &kp SEMI    &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
+    &kp SEMI    &kp Z       &td_cut      &td_copy    &kp D       &td_paste      &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
                                         &hyper_esc HYPER ESC    &lt NAV SPACE &mt LGUI TAB  &lt NUM RET &lt SYM BSPC &lt FUNC DEL
             >;
         };
