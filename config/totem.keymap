@@ -119,7 +119,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_COPY";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <50>;
             bindings = <&kp C>, <&kp LC(C)>;
         };
         
@@ -127,7 +127,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CUT";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <50>;
             bindings = <&kp X>, <&kp LC(X)>;
         };
         
@@ -135,7 +135,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_PASTE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <50>;
             bindings = <&kp V>, <&kp LC(V)>;
         };
     };
