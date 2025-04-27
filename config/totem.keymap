@@ -127,6 +127,28 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp LGUI>, <&macro_tap &kp TAB>, <&macro_pause_for_release>, <&macro_release &kp LGUI>;
         };
+
+        // Copy, cut, paste macros
+        copy_macro: copy_macro {
+            label = "copy_macro";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp C>, <&macro_release &kp LGUI>;
+        };
+
+        cut_macro: cut_macro {
+            label = "cut_macro";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp X>, <&macro_release &kp LGUI>;
+        };
+
+        paste_macro: paste_macro {
+            label = "paste_macro";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp V>, <&macro_release &kp LGUI>;
+        };
     };
 
     // Combos
@@ -155,19 +177,19 @@
         combo_copy {
             timeout-ms = <100>;
             key-positions = <23 24>; // C and D keys
-            bindings = <&kp LGUI(C)>;
+            bindings = <&copy_macro>;
         };
         
         combo_cut {
             timeout-ms = <100>;
             key-positions = <22 23>; // X and C keys
-            bindings = <&kp LGUI(X)>;
+            bindings = <&cut_macro>;
         };
         
         combo_paste {
             timeout-ms = <100>;
             key-positions = <24 25>; // D and V keys
-            bindings = <&kp LGUI(V)>;
+            bindings = <&paste_macro>;
         };
     };
 
