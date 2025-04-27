@@ -8,7 +8,7 @@
 //                                                             ▀▀▀▀▀    █  █  █      ▀
 //                                                                      ▀  ▀  ▀
 //
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
        
 
 #include <behaviors.dtsi>
@@ -99,31 +99,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         
-        // Tap dances for copy/cut/paste
-        td_copy: tap_dance_copy {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_COPY";
-            #binding-cells = <0>;
-            tapping-term-ms = <50>;
-            bindings = <&kp C>, <&kp LC(C)>;
-        };
-        
-        td_cut: tap_dance_cut {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_CUT";
-            #binding-cells = <0>;
-            tapping-term-ms = <50>;
-            bindings = <&kp X>, <&kp LC(X)>;
-        };
-        
-        td_paste: tap_dance_paste {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_PASTE";
-            #binding-cells = <0>;
-            tapping-term-ms = <50>;
-            bindings = <&kp V>, <&kp LC(V)>;
-        };
-        
         // Number row hold-tap
         ht_num: hold_tap_number {
             compatible = "zmk,behavior-hold-tap";
@@ -175,6 +150,25 @@
             key-positions = <1 2>; // W and F keys
             bindings = <&kp LC(C)>;
         };
+        
+        // Copy, Cut, Paste combos
+        combo_copy {
+            timeout-ms = <100>;
+            key-positions = <23 24>; // C and D keys
+            bindings = <&kp LC(C)>;
+        };
+        
+        combo_cut {
+            timeout-ms = <100>;
+            key-positions = <22 23>; // X and C keys
+            bindings = <&kp LC(X)>;
+        };
+        
+        combo_paste {
+            timeout-ms = <100>;
+            key-positions = <24 25>; // D and V keys
+            bindings = <&kp LC(V)>;
+        };
     };
 
     keymap {
@@ -189,7 +183,7 @@ label= "BASE"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃  LSFT(A)  ┃  LCTRL(R) ┃  LALT(S)  ┃  LGUI(T)  ┃     G     ┃   ┃     M     ┃  LGUI(N)  ┃  LALT(E)  ┃  LCTRL(I) ┃  LSHFT(O) ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃     ;     ┃     Z     ┃   X/CUT   ┃   C/COPY  ┃     D     ┃   V/PASTE ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃     '     ┃
+// ┃     ;     ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃     '     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃    HYPR   ┃  NAV(SPC) ┃    TAB    ┃   ┃  NUM(RET) ┃ SYM(BSPC) ┃ FUNC(DEL) ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -198,7 +192,7 @@ bindings = <
 
                 &ht_num N1 Q &ht_num N2 W &ht_num N3 F &ht_num N4 P &ht_num N5 B   &ht_num N6 J &ht_num N7 L &ht_num N8 U &ht_num N9 Y &ht_num N0 MINUS
                 &hml LSHFT A &hml LCTRL R &hml LALT S &hml LGUI T &kp G         &kp M       &hmr LGUI N &hmr LALT E &hmr LCTRL I &hmr LSHFT O
-    &kp SEMI    &kp Z       &td_cut      &td_copy    &kp D       &td_paste      &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
+    &kp SEMI    &kp Z       &kp X        &kp C       &kp D       &kp V          &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
                                &kp LS(LC(LA(LGUI))) &lt NAV SPACE &kp TAB       &lt NUM RET &lt SYM BSPC &lt FUNC DEL
             >;
         };
