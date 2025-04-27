@@ -144,7 +144,7 @@
         };
         
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <0 1>; // Q and W keys
             bindings = <&kp ESC>;
         };
