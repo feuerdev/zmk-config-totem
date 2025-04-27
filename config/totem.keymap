@@ -193,16 +193,16 @@ label= "SYM"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃     *     ┃     -     ┃     +     ┃     =     ┃     #     ┃   ┃     |     ┃     (     ┃     )     ┃     @     ┃     `     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃   EMAIL   ┃     <     ┃     >     ┃           ┃           ┃   ALT(U)  ┃   ┃     ~     ┃     {     ┃     }     ┃           ┃           ┃           ┃
+// ┃   EMAIL   ┃           ┃     <     ┃     >     ┃     &     ┃   ALT(U)  ┃   ┃     ~     ┃     {     ┃     }     ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp CARET   &kp DQT     &kp DLLR    &kp PRCNT   &kp AMPS        &trans      &kp LBKT    &kp RBKT    &trans      &trans
+                &kp CARET   &kp DQT     &kp DLLR    &kp PRCNT   &trans          &trans      &kp LBKT    &kp RBKT    &trans      &trans
                 &kp STAR    &kp MINUS   &kp PLUS    &kp EQUAL   &kp HASH        &kp PIPE    &kp LPAR    &kp RPAR    &kp AT      &kp GRAVE
-    &email      &kp LT      &kp GT      &trans      &trans      &kp LA(U)       &kp TILDE   &kp LBRC    &kp RBRC    &trans      &trans &trans
+    &email      &trans      &kp LT      &kp GT      &kp AMPS    &kp LA(U)       &kp TILDE   &kp LBRC    &kp RBRC    &trans      &trans &trans
                                         &trans      &trans      &trans          &trans      &trans      &trans
             >;
         };
