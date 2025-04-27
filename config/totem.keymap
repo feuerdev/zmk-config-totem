@@ -23,6 +23,9 @@
 #define FUNC 3
 #define NUM  4
 
+// Modifier definitions
+#define HYPER (MOD_LCTL | MOD_LSFT | MOD_LALT | MOD_LGUI)
+
 // Home row mods macros for Totem (38-key layout)
 // Top row: 0-4 (left), 5-9 (right)
 // Home row: 10-14 (left), 15-19 (right)  
@@ -76,6 +79,18 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
+        };
+        
+        // HYPER ESC - HYPER on hold, ESC on tap
+        hyper_esc: hyper_esc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HYPER_ESC";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
         };
         
         mo_comma: mo_comma {
@@ -149,7 +164,7 @@ label= "BASE"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃     ;     ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃     '     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
-//                                     ┃    ESC    ┃  NAV(SPC) ┃ LGUI(TAB) ┃   ┃  NUM(RET) ┃ SYM(BSPC) ┃ FUNC(DEL) ┃
+//                                     ┃ HYPR(ESC) ┃  NAV(SPC) ┃ LGUI(TAB) ┃   ┃  NUM(RET) ┃ SYM(BSPC) ┃ FUNC(DEL) ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -157,7 +172,7 @@ bindings = <
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp MINUS
                 &hml LSHFT A &hml LCTRL R &hml LALT S &hml LGUI T &kp G         &kp M       &hmr LGUI N &hmr LALT E &hmr LCTRL I &hmr LSHFT O
     &kp SEMI    &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
-                                        &kp ESC     &lt NAV SPACE &mt LGUI TAB  &lt NUM RET &lt SYM BSPC &lt FUNC DEL
+                                        &hyper_esc HYPER ESC    &lt NAV SPACE &mt LGUI TAB  &lt NUM RET &lt SYM BSPC &lt FUNC DEL
             >;
         };
 
