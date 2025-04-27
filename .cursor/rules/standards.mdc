@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+When updating the keymap, always make sure that the comment map is updated as well.
