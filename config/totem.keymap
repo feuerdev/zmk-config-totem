@@ -127,14 +127,6 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp J &kp A &kp N &kp N &kp I &kp K &kp AT &kp F &kp E &kp U &kp E &kp R &kp DOT &kp D &kp E &kp V>;
         };
-        
-        // Application switcher macro
-        app_switch: app_switch {
-            label = "app_switcher";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp TAB>, <&macro_pause_for_release>, <&macro_release &kp LGUI>;
-        };
 
         // Copy, cut, paste macros
         copy_macro: copy_macro {
@@ -234,19 +226,19 @@ label= "NAV"                              ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃ SWITCH WIN┃     UP    ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃  LEFT     ┃   DOWN    ┃   RIGHT   ┃           ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃  LEFT     ┃   DOWN    ┃   RIGHT   ┃   RIGHT   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃ SWITCH APP┃ SWITCH TAB┃ SWITCH TAB┃           ┃           ┃
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃ SWITCH TAB┃ SWITCH TAB┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &trans      &trans      &trans      &trans      &trans          &trans      &kp LG(GRAVE) &kp UP     &trans      &trans
-                &trans      &trans      &trans      &trans      &trans          &trans      &kp LEFT     &kp DOWN    &kp RIGHT   &trans
-    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &app_switch  &kp LG(LBRC) &kp LG(RBRC) &trans &trans
-                                        &trans      &trans      &trans          &trans      &trans       &trans
+                &trans      &trans      &trans      &trans      &trans          &none      &kp LG(GRAVE) &kp UP     &none       &none
+                &trans      &trans      &trans      &trans      &trans          &none      &kp LEFT     &kp DOWN    &kp RIGHT   &kp RIGHT
+    &trans      &trans      &trans      &trans      &trans      &trans          &none      &none        &kp LG(LBRC) &kp LG(RBRC) &none     &none
+                                        &trans      &trans      &trans          &trans     &trans       &trans
             >;
         };
 
