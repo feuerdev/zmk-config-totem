@@ -253,8 +253,30 @@
         
         combo_rbrace {
             timeout-ms = <100>;
-            key-positions = <28 29>; // COMMA and DOT keys (bottom row)
+            key-positions = <28 29>; // COMMA and DOT keys
             bindings = <&kp RBRC>;
+        };
+        
+        // Arithmetic operators on home row (left hand)
+        combo_equal {
+            timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
+            key-positions = <12 13>; // S and T keys
+            bindings = <&kp EQUAL>;
+        };
+        
+        combo_plus {
+            timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
+            key-positions = <11 12>; // R and S keys
+            bindings = <&kp PLUS>;
+        };
+        
+        combo_minus {
+            timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
+            key-positions = <10 11>; // A and R keys
+            bindings = <&kp MINUS>;
         };
     };
 
