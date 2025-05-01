@@ -117,6 +117,16 @@
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
         };
+
+        ht_v: hold_tap_v {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_V";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     // Macros
@@ -292,7 +302,7 @@ label= "BASE"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃  LSFT(A)  ┃  LCTRL(R) ┃  LALT(S)  ┃  LGUI(T)  ┃     G     ┃   ┃     M     ┃  LGUI(N)  ┃  LALT(E)  ┃  LCTRL(I) ┃  LSHFT(O) ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃     :     ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃     '     ┃
+// ┃     :     ┃     Z     ┃     X     ┃     C     ┃     D     ┃  V/ALT(U) ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃     '     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃    HYPR   ┃  NAV(SPC) ┃    TAB    ┃   ┃  NUM(RET) ┃ SYM(BSPC) ┃ FUNC(DEL) ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -301,7 +311,7 @@ bindings = <
 
                 &ht_num N1 Q &ht_num N2 W &ht_num N3 F &ht_num N4 P &ht_num N5 B   &ht_num N6 J &ht_num N7 L &ht_num N8 U &ht_num N9 Y &ht_num N0 MINUS
                 &hml LSHFT A &hml LCTRL R &hml LALT S &hml LGUI T &kp G         &kp M       &hmr LGUI N &hmr LALT E &hmr LCTRL I &hmr LSHFT O
-    &mo_colon   &kp Z       &kp X        &kp C       &kp D       &kp V          &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
+    &mo_colon   &kp Z       &kp X        &kp C       &kp D       &ht_v V LA(U)   &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
                                &kp LS(LC(LA(LGUI))) &lt NAV SPACE &kp TAB       &lt NUM RET &lt SYM BSPC &lt FUNC DEL
             >;
         };
@@ -334,20 +344,20 @@ label= "NAV"                              ;
 label= "SYM"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     ^     ┃     "     ┃     $     ┃     %     ┃           ┃   ┃           ┃     [     ┃     ]     ┃           ┃           ┃
+//             ┃     ^     ┃           ┃     $     ┃     %     ┃           ┃   ┃           ┃     [     ┃     ]     ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃     *     ┃     -     ┃     +     ┃     =     ┃     #     ┃   ┃     |     ┃     (     ┃     )     ┃     @     ┃     `     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃   EMAIL   ┃           ┃     <     ┃     >     ┃     &     ┃   ALT(U)  ┃   ┃     ~     ┃     {     ┃     }     ┃           ┃           ┃           ┃
+// ┃   EMAIL   ┃           ┃     <     ┃     >     ┃     &     ┃           ┃   ┃     ~     ┃     {     ┃     }     ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp CARET   &kp DQT     &kp DLLR    &kp PRCNT   &trans          &trans      &kp LBKT    &kp RBKT    &trans      &trans
+                &kp CARET   &kp trans   &kp DLLR    &kp PRCNT   &trans          &trans      &kp LBKT    &kp RBKT    &trans      &trans
                 &kp STAR    &kp MINUS   &kp PLUS    &kp EQUAL   &kp HASH        &kp PIPE    &kp LPAR    &kp RPAR    &kp AT      &kp GRAVE
-    &email      &trans      &kp LT      &kp GT      &kp AMPS    &kp LA(U)       &kp TILDE   &kp LBRC    &kp RBRC    &trans      &trans &trans
+    &email      &trans      &kp LT      &kp GT      &kp AMPS    &trans          &kp TILDE   &kp LBRC    &kp RBRC    &trans      &trans &trans
                                         &trans      &trans      &trans          &trans      &trans      &trans
             >;
         };
