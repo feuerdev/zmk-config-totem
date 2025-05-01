@@ -197,6 +197,65 @@
             key-positions = <13 14>; // T and G keys
             bindings = <&kp HASH>;
         };
+        
+        combo_dollar {
+            timeout-ms = <100>;
+            key-positions = <2 3>; // F and P keys
+            bindings = <&kp DLLR>;
+        };
+        
+        combo_percent {
+            timeout-ms = <100>;
+            key-positions = <3 4>; // P and B keys
+            bindings = <&kp PRCNT>;
+        };
+        
+        combo_pipe {
+            timeout-ms = <100>;
+            key-positions = <29 30>; // DOT and SLASH keys
+            bindings = <&kp PIPE>;
+        };
+        
+        // Square brackets
+        combo_lbracket {
+            timeout-ms = <100>;
+            key-positions = <7 8>; // L and U keys (top row)
+            bindings = <&kp LBKT>;
+        };
+        
+        combo_rbracket {
+            timeout-ms = <100>;
+            key-positions = <8 9>; // U and Y keys (top row)
+            bindings = <&kp RBKT>;
+        };
+        
+        // Parentheses
+        combo_lparen {
+            timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
+            key-positions = <16 17>; // N and E keys (home row)
+            bindings = <&kp LPAR>;
+        };
+        
+        combo_rparen {
+            timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
+            key-positions = <17 18>; // E and I keys (home row)
+            bindings = <&kp RPAR>;
+        };
+        
+        // Curly braces
+        combo_lbrace {
+            timeout-ms = <100>;
+            key-positions = <27 28>; // H and COMMA keys (bottom row)
+            bindings = <&kp LBRC>;
+        };
+        
+        combo_rbrace {
+            timeout-ms = <100>;
+            key-positions = <28 29>; // COMMA and DOT keys (bottom row)
+            bindings = <&kp RBRC>;
+        };
     };
 
     keymap {
