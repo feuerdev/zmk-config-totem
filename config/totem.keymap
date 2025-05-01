@@ -48,6 +48,10 @@
     require-prior-idle-ms = <75>;
 };
 
+&caps_word {
+    continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>;
+};
+
 / {
     behaviors {
         // Home row mods - left hand (ASRT)
@@ -104,6 +108,14 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COLON>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        
+        // Hyphen/Underscore mod-morph (for automatic underscore with caps-word)
+        hyphen_under: hyphen_underscore {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         
@@ -336,7 +348,7 @@ label= "BASE"                              ;
 bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &ht_num N1 Q &ht_num N2 W &ht_num N3 F &ht_num N4 P &ht_num N5 B   &ht_num N6 J &ht_num N7 L &ht_num N8 U &ht_num N9 Y &ht_num N0 MINUS
+                &ht_num N1 Q &ht_num N2 W &ht_num N3 F &ht_num N4 P &ht_num N5 B   &ht_num N6 J &ht_num N7 L &ht_num N8 U &ht_num N9 Y &ht_num N0 &hyphen_under
                 &hml LSHFT A &hml LCTRL R &hml LALT S &hml LGUI T &kp G         &kp M       &hmr LGUI N &hmr LALT E &hmr LCTRL I &hmr LSHFT O
     &mo_colon   &kp Z       &kp X        &kp C       &kp D       &ht_v LA(U) V   &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
                                &kp LS(LC(LA(LGUI))) &lt NAV SPACE &kp TAB       &lt NUM RET &lt SYM BSPC &lt FUNC DEL
