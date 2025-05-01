@@ -229,13 +229,13 @@
         // Square brackets
         combo_lbracket {
             timeout-ms = <100>;
-            key-positions = <7 8>; // L and U keys (top row)
+            key-positions = <6 7>; // L and U keys (top row)
             bindings = <&kp LBKT>;
         };
         
         combo_rbracket {
             timeout-ms = <100>;
-            key-positions = <8 9>; // U and Y keys (top row)
+            key-positions = <7 8>; // U and Y keys (top row)
             bindings = <&kp RBKT>;
         };
         
