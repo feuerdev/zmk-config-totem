@@ -355,7 +355,7 @@ label= "SYM"                              ;
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp CARET   &kp trans   &kp DLLR    &kp PRCNT   &trans          &trans      &kp LBKT    &kp RBKT    &trans      &trans
+                &kp CARET   &trans      &kp DLLR    &kp PRCNT   &trans          &trans      &kp LBKT    &kp RBKT    &trans      &trans
                 &kp STAR    &kp MINUS   &kp PLUS    &kp EQUAL   &kp HASH        &kp PIPE    &kp LPAR    &kp RPAR    &kp AT      &kp GRAVE
     &email      &trans      &kp LT      &kp GT      &kp AMPS    &trans          &kp TILDE   &kp LBRC    &kp RBRC    &trans      &trans &trans
                                         &trans      &trans      &trans          &trans      &trans      &trans
