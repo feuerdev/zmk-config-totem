@@ -288,6 +288,33 @@
             key-positions = <10 11>; // A and R keys
             bindings = <&kp MINUS>;
         };
+        
+        // Additional symbol combos
+        combo_tilde {
+            timeout-ms = <100>;
+            key-positions = <26 27>; // K and H keys
+            bindings = <&kp TILDE>;
+        };
+        
+        combo_grave {
+            timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
+            key-positions = <18 19>; // I and O keys (home row)
+            bindings = <&kp GRAVE>;
+        };
+        
+        combo_asterisk {
+            timeout-ms = <100>;
+            key-positions = <20 21>; // Z and X keys
+            bindings = <&kp ASTERISK>;
+        };
+        
+        combo_at {
+            timeout-ms = <100>;
+            require-prior-idle-ms = <100>;
+            key-positions = <15 16>; // M and N keys (home row)
+            bindings = <&kp AT>;
+        };
     };
 
     keymap {
