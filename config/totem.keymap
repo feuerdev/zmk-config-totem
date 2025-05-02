@@ -342,20 +342,20 @@ bindings = <
 label= "NAV"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃  ALL+Q    ┃  ALL+W    ┃  ALL+F    ┃  ALL+P    ┃  ALL+B    ┃   ┃  ALL+J    ┃ SWITCH WIN┃     UP    ┃  ALL+Y    ┃  ALL+MINUS┃
+//             ┃  ALL+Q    ┃  ALL+W    ┃  ALL+F    ┃  ALL+P    ┃  ALL+B    ┃   ┃  MEH+J    ┃ SWITCH WIN┃     UP    ┃  MEH+Y    ┃  MEH+MINUS┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃   LSFT    ┃   LCTRL   ┃   LALT    ┃   LGUI    ┃  ALL+G    ┃   ┃  ALL+M    ┃  LEFT     ┃   DOWN    ┃   RIGHT   ┃   ALL+O   ┃
+//             ┃   LSFT    ┃   LCTRL   ┃   LALT    ┃   LGUI    ┃  ALL+G    ┃   ┃  MEH+M    ┃  LEFT     ┃   DOWN    ┃   RIGHT   ┃   MEH+O   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃  ALL+SEMI ┃  ALL+Z    ┃  ALL+X    ┃  ALL+C    ┃  ALL+D    ┃  ALL+V    ┃   ┃  ALL+K    ┃  ALL+H    ┃ SWITCH TAB┃ SWITCH TAB┃  ALL+SLASH┃  ALL+SQT  ┃
+// ┃  ALL+SEMI ┃  ALL+Z    ┃  ALL+X    ┃  ALL+C    ┃  ALL+D    ┃  ALL+V    ┃   ┃  MEH+K    ┃  MEH+H    ┃ SWITCH TAB┃ SWITCH TAB┃  MEH+SLASH┃  MEH+SQT  ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp LS(LC(LA(LG(Q)))) &kp LS(LC(LA(LG(W)))) &kp LS(LC(LA(LG(F)))) &kp LS(LC(LA(LG(P)))) &kp LS(LC(LA(LG(B))))     &kp LS(LC(LA(LG(J)))) &kp LG(GRAVE) &kp UP       &kp LS(LC(LA(LG(Y)))) &kp LS(LC(LA(LG(MINUS))))
-                &kp LSFT    &kp LCTRL   &kp LALT    &kp LGUI    &kp LS(LC(LA(LG(G))))     &kp LS(LC(LA(LG(M)))) &kp LEFT &kp DOWN &kp RIGHT    &kp LS(LC(LA(LG(O))))
-    &kp LS(LC(LA(LG(SEMI)))) &kp LS(LC(LA(LG(Z)))) &kp LS(LC(LA(LG(X)))) &kp LS(LC(LA(LG(C)))) &kp LS(LC(LA(LG(D)))) &kp LS(LC(LA(LG(V))))     &kp LS(LC(LA(LG(K)))) &kp LS(LC(LA(LG(H)))) &kp LG(LBRC) &kp LG(RBRC) &kp LS(LC(LA(LG(FSLH)))) &kp LS(LC(LA(LG(SQT))))
+                &kp LS(LC(LA(LG(Q)))) &kp LS(LC(LA(LG(W)))) &kp LS(LC(LA(LG(F)))) &kp LS(LC(LA(LG(P)))) &kp LS(LC(LA(LG(B))))     &kp LS(LC(LA(J))) &kp LG(GRAVE) &kp UP       &kp LS(LC(LA(Y))) &kp LS(LC(LA(MINUS)))
+                &kp LSFT    &kp LCTRL   &kp LALT    &kp LGUI    &kp LS(LC(LA(LG(G))))     &kp LS(LC(LA(M))) &kp LEFT &kp DOWN &kp RIGHT    &kp LS(LC(LA(O)))
+    &kp LS(LC(LA(LG(SEMI)))) &kp LS(LC(LA(LG(Z)))) &kp LS(LC(LA(LG(X)))) &kp LS(LC(LA(LG(C)))) &kp LS(LC(LA(LG(D)))) &kp LS(LC(LA(LG(V))))     &kp LS(LC(LA(K))) &kp LS(LC(LA(H))) &kp LG(LBRC) &kp LG(RBRC) &kp LS(LC(LA(FSLH))) &kp LS(LC(LA(SQT)))
                                         &trans      &trans      &trans           &trans     &trans        &trans
             >;
         };
