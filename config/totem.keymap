@@ -23,8 +23,6 @@
 #define FUNC 3
 #define NUM  4
 
-#define HYPR(key) &kp LS(LC(LA(LGUI(key))))
-
 // Home row mods macros for Totem (38-key layout)
 // Top row: 0-4 (left), 5-9 (right)
 // Home row: 10-14 (left), 15-19 (right)  
@@ -344,20 +342,20 @@ bindings = <
 label= "NAV"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃  HYPR(Q)  ┃  HYPR(W)  ┃  HYPR(F)  ┃  HYPR(P)  ┃  HYPR(B)  ┃   ┃           ┃ SWITCH WIN┃     UP    ┃           ┃           ┃
+//             ┃ HYPER + Q ┃ HYPER + W ┃ HYPER + F ┃ HYPER + P ┃ HYPER + B ┃   ┃           ┃ SWITCH WIN┃     UP    ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃   LSFT    ┃   LCTRL   ┃   LALT    ┃   LGUI    ┃  HYPR(G)  ┃   ┃           ┃  LEFT     ┃   DOWN    ┃   RIGHT   ┃   RIGHT   ┃
+//             ┃   LSFT    ┃   LCTRL   ┃   LALT    ┃   LGUI    ┃ HYPER + G ┃   ┃           ┃  LEFT     ┃   DOWN    ┃   RIGHT   ┃   RIGHT   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃HYPR(COLON)┃  HYPR(Z)  ┃  HYPR(X)  ┃  HYPR(C)  ┃  HYPR(D)  ┃  HYPR(V)  ┃   ┃           ┃           ┃ SWITCH TAB┃ SWITCH TAB┃           ┃           ┃
+// ┃HYPER+SEMI ┃ HYPER + Z ┃ HYPER + X ┃ HYPER + C ┃ HYPER + D ┃ HYPER + V ┃   ┃           ┃           ┃ SWITCH TAB┃ SWITCH TAB┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &HYPR(Q)    &HYPR(W)    &HYPR(F)    &HYPR(P)    &HYPR(B)        &none      &kp LG(GRAVE) &kp UP     &none       &none
-                &kp LSFT    &kp LCTRL   &kp LALT    &kp LGUI    &HYPR(G)        &none      &kp LEFT     &kp DOWN    &kp RIGHT   &kp RIGHT
-    &HYPR(COLON) &HYPR(Z)   &HYPR(X)    &HYPR(C)    &HYPR(D)    &HYPR(V)        &none      &none        &kp LG(LBRC) &kp LG(RBRC) &none     &none
+                &kp LS(LC(LA(LGUI(Q)))) &kp LS(LC(LA(LGUI(W)))) &kp LS(LC(LA(LGUI(F)))) &kp LS(LC(LA(LGUI(P)))) &kp LS(LC(LA(LGUI(B))))        &none      &kp LG(GRAVE) &kp UP     &none       &none
+                &kp LSFT    &kp LCTRL   &kp LALT    &kp LGUI    &kp LS(LC(LA(LGUI(G))))        &none      &kp LEFT     &kp DOWN    &kp RIGHT   &kp RIGHT
+    &kp LS(LC(LA(LGUI(SEMI)))) &kp LS(LC(LA(LGUI(Z)))) &kp LS(LC(LA(LGUI(X)))) &kp LS(LC(LA(LGUI(C)))) &kp LS(LC(LA(LGUI(D)))) &kp LS(LC(LA(LGUI(V))))        &none      &none        &kp LG(LBRC) &kp LG(RBRC) &none     &none
                                         &trans      &trans      &trans          &trans     &trans       &trans
             >;
         };
