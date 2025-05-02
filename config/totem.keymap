@@ -184,21 +184,21 @@
         };
         
         // Copy, Cut, Paste combos
+        combo_cut {
+            timeout-ms = <130>;
+            key-positions = <21 22>; // Z and X keys
+            bindings = <&cut_macro>;
+        };
+
         combo_copy {
-            timeout-ms = <100>;
-            key-positions = <23 24>; // C and D keys
+            timeout-ms = <130>;
+            key-positions = <22 23>; // X and C keys
             bindings = <&copy_macro>;
         };
         
-        combo_cut {
-            timeout-ms = <100>;
-            key-positions = <22 23>; // X and C keys
-            bindings = <&cut_macro>;
-        };
-        
         combo_paste {
-            timeout-ms = <100>;
-            key-positions = <24 25>; // D and V keys
+            timeout-ms = <130>;
+            key-positions = <23 24>; // C and D keys
             bindings = <&paste_macro>;
         };
         
@@ -301,12 +301,6 @@
             require-prior-idle-ms = <100>;
             key-positions = <18 19>; // I and O keys (home row)
             bindings = <&kp GRAVE>;
-        };
-        
-        combo_asterisk {
-            timeout-ms = <100>;
-            key-positions = <20 21>; // Z and X keys
-            bindings = <&kp ASTERISK>;
         };
         
         combo_at {
