@@ -8,7 +8,7 @@
 //                                                             ▀▀▀▀▀    █  █  █      ▀
 //                                                                      ▀  ▀  ▀
 //
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
        
 
 #include <behaviors.dtsi>
@@ -62,17 +62,6 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
-        };
-
-        // Hyper key macro - all modifiers + a key
-        hyper: hyper_key {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            label = "HYPER_KEY";
-            bindings = 
-                <&macro_press &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI>,
-                <&macro_tap &macro_param_1to1>,
-                <&macro_release &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI>;
         };
         
         // Home row mods - right hand (NEIO)
@@ -353,20 +342,20 @@ bindings = <
 label= "NAV"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃ HYPER + Q ┃ HYPER + W ┃ HYPER + F ┃ HYPER + P ┃ HYPER + B ┃   ┃           ┃ SWITCH WIN┃     UP    ┃           ┃           ┃
+//             ┃  ALL+Q    ┃  ALL+W    ┃  ALL+F    ┃  ALL+P    ┃  ALL+B    ┃   ┃           ┃ SWITCH WIN┃     UP    ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃   LSFT    ┃   LCTRL   ┃   LALT    ┃   LGUI    ┃ HYPER + G ┃   ┃           ┃  LEFT     ┃   DOWN    ┃   RIGHT   ┃   RIGHT   ┃
+//             ┃   LSFT    ┃   LCTRL   ┃   LALT    ┃   LGUI    ┃  ALL+G    ┃   ┃           ┃  LEFT     ┃   DOWN    ┃   RIGHT   ┃   RIGHT   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃HYPER+SEMI ┃ HYPER + Z ┃ HYPER + X ┃ HYPER + C ┃ HYPER + D ┃ HYPER + V ┃   ┃           ┃           ┃ SWITCH TAB┃ SWITCH TAB┃           ┃           ┃
+// ┃  ALL+SEMI ┃  ALL+Z    ┃  ALL+X    ┃  ALL+C    ┃  ALL+D    ┃  ALL+V    ┃   ┃           ┃           ┃ SWITCH TAB┃ SWITCH TAB┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &hyper Q    &hyper W    &hyper F    &hyper P    &hyper B         &none      &kp LG(GRAVE) &kp UP       &none        &none
-                &kp LSFT    &kp LCTRL   &kp LALT    &kp LGUI    &hyper G         &none      &kp LEFT      &kp DOWN     &kp RIGHT    &kp RIGHT
-    &hyper SEMI &hyper Z    &hyper X    &hyper C    &hyper D    &hyper V         &none      &none         &kp LG(LBRC) &kp LG(RBRC) &none     &none
+                &kp LS(LC(LA(LG(Q)))) &kp LS(LC(LA(LG(W)))) &kp LS(LC(LA(LG(F)))) &kp LS(LC(LA(LG(P)))) &kp LS(LC(LA(LG(B))))     &none      &kp LG(GRAVE) &kp UP       &none        &none
+                &kp LSFT    &kp LCTRL   &kp LALT    &kp LGUI    &kp LS(LC(LA(LG(G))))     &none      &kp LEFT      &kp DOWN     &kp RIGHT    &kp RIGHT
+    &kp LS(LC(LA(LG(SEMI)))) &kp LS(LC(LA(LG(Z)))) &kp LS(LC(LA(LG(X)))) &kp LS(LC(LA(LG(C)))) &kp LS(LC(LA(LG(D)))) &kp LS(LC(LA(LG(V))))     &none      &none         &kp LG(LBRC) &kp LG(RBRC) &none     &none
                                         &trans      &trans      &trans           &trans     &trans        &trans
             >;
         };
