@@ -133,28 +133,6 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp J &kp A &kp N &kp N &kp I &kp K &kp AT &kp F &kp E &kp U &kp E &kp R &kp DOT &kp D &kp E &kp V>;
         };
-
-        // Copy, cut, paste macros
-        copy_macro: copy_macro {
-            label = "copy_macro";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp C>, <&macro_release &kp LGUI>;
-        };
-
-        cut_macro: cut_macro {
-            label = "cut_macro";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp X>, <&macro_release &kp LGUI>;
-        };
-
-        paste_macro: paste_macro {
-            label = "paste_macro";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_tap &kp V>, <&macro_release &kp LGUI>;
-        };
     };
 
     // Combos
@@ -179,23 +157,23 @@
             bindings = <&kp LC(C)>;
         };
         
-        // Copy, Cut, Paste combos
+        // Copy, Cut, Paste combos with direct keycodes
         combo_cut {
             timeout-ms = <130>;
             key-positions = <21 22>; // Z and X keys
-            bindings = <&cut_macro>;
+            bindings = <&kp LG(X)>;
         };
 
         combo_copy {
             timeout-ms = <130>;
             key-positions = <22 23>; // X and C keys
-            bindings = <&copy_macro>;
+            bindings = <&kp LG(C)>;
         };
         
         combo_paste {
             timeout-ms = <130>;
             key-positions = <23 24>; // C and D keys
-            bindings = <&paste_macro>;
+            bindings = <&kp LG(V)>;
         };
         
         combo_hash {
