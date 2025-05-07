@@ -33,14 +33,6 @@
 #define THUMBS 32 33 34 35 36 37 // thumb keys
 
 // Behavior customizations
-&mt {
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <175>;
-    require-prior-idle-ms = <150>;
-    retro-tap;
-};
-
 &lt {
     flavor = "balanced";
     tapping-term-ms = <280>;
