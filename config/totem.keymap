@@ -70,20 +70,23 @@
             hold-trigger-on-release;
         };
         
+        // Comma/Exclamation mod-morph
         mo_comma: mo_comma {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        
+
+        // Dot/Question mod-morph
         mo_dot: mo_dot {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp QMARK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        
+
+        // Slash/Backslash mod-morph
         mo_slash: mo_slash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -110,6 +113,7 @@
             bindings = <&kp>, <&kp>;
         };
 
+        // hold-tap for Umlaute 
         ht_v: hold_tap_v {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_V";
