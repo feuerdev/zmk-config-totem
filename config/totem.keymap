@@ -26,11 +26,17 @@
 // Home row mods macros for Totem (38-key layout)
 // Top row: 0-4 (left), 5-9 (right)
 // Home row: 10-14 (left), 15-19 (right)  
-// Bottom row: 20-25 (left), 26-31 (right)
+// Bottom row: 20-25 (left), 26-31 (right), this includes the extra keys on the totem
 // Thumb keys: 32-34 (left), 35-37 (right)
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 // left-hand keys
 #define KEYS_R 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 // right-hand keys
 #define THUMBS 32 33 34 35 36 37 // thumb keys
+
+#define COMBO_TERM_FAST 18
+#define COMBO_TERM_SLOW 30
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
 
 // Behavior customizations
 &lt {
@@ -140,152 +146,168 @@
         compatible = "zmk,combos";
         
         combo_capsword {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <10 19>; // A and O keys
             bindings = <&caps_word>;
         };
         
         combo_esc {
-            timeout-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <0 1>; // Q and W keys
             bindings = <&kp ESC>;
         };
         
         combo_ctrl_c {
-            timeout-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <1 2>; // W and F keys
             bindings = <&kp LC(C)>;
         };
         
         // Copy, Cut, Paste combos with direct keycodes
         combo_cut {
-            timeout-ms = <130>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <21 22>; // Z and X keys
             bindings = <&kp LG(X)>;
         };        
         
         combo_cut_alt {
-            timeout-ms = <130>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <22 24>; // X and D keys
             bindings = <&kp LG(X)>;
         };
 
         combo_copy {
-            timeout-ms = <130>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <22 23>; // X and C keys
             bindings = <&kp LG(C)>;
         };
         
         combo_paste {
-            timeout-ms = <130>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <23 24>; // C and D keys
             bindings = <&kp LG(V)>;
         };
 
         combo_hash {
-            timeout-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <13 14>; // T and G keys
             bindings = <&kp HASH>;
         };
         
         combo_dollar {
-            timeout-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <2 3>; // F and P keys
             bindings = <&kp DLLR>;
         };
         
         combo_percent {
-            timeout-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <3 4>; // P and B keys
             bindings = <&kp PRCNT>;
         };
         
         combo_pipe {
-            timeout-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <29 30>; // DOT and SLASH keys
             bindings = <&kp PIPE>;
         };
         
         // Square brackets
         combo_lbracket {
-            timeout-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <6 7>; // L and U keys (top row)
             bindings = <&kp LBKT>;
         };
         
         combo_rbracket {
-            timeout-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <7 8>; // U and Y keys (top row)
             bindings = <&kp RBKT>;
         };
         
         // Parentheses
         combo_lparen {
-            timeout-ms = <100>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <16 17>; // N and E keys (home row)
             bindings = <&kp LPAR>;
         };
         
         combo_rparen {
-            timeout-ms = <100>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <17 18>; // E and I keys (home row)
             bindings = <&kp RPAR>;
         };
         
         // Curly braces
         combo_lbrace {
-            timeout-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <27 28>; // H and COMMA keys (bottom row)
             bindings = <&kp LBRC>;
         };
         
         combo_rbrace {
-            timeout-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <28 29>; // COMMA and DOT keys
             bindings = <&kp RBRC>;
         };
         
         // Arithmetic operators on home row (left hand)
         combo_equal {
-            timeout-ms = <100>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <12 13>; // S and T keys
             bindings = <&kp EQUAL>;
         };
         
         combo_plus {
-            timeout-ms = <100>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <11 12>; // R and S keys
             bindings = <&kp PLUS>;
         };
         
         combo_minus {
-            timeout-ms = <100>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <10 11>; // A and R keys
             bindings = <&kp MINUS>;
         };
         
         // Additional symbol combos
         combo_tilde {
-            timeout-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <26 27>; // K and H keys
             bindings = <&kp TILDE>;
         };
         
         combo_grave {
-            timeout-ms = <100>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <18 19>; // I and O keys (home row)
             bindings = <&kp GRAVE>;
         };
         
         combo_at {
-            timeout-ms = <100>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <15 16>; // M and N keys (home row)
             bindings = <&kp AT>;
         };
