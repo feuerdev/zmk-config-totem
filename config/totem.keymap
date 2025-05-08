@@ -338,7 +338,7 @@ label= "BASE"                              ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃   Q/1     ┃   W/2     ┃   F/3     ┃   P/4     ┃   B/5     ┃   ┃   J/6     ┃   L/7     ┃   U/8     ┃   Y/9     ┃   -/0     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃  LSFT(A)  ┃  LCTRL(R) ┃  LALT(S)  ┃  LGUI(T)  ┃     G     ┃   ┃     M     ┃  LGUI(N)  ┃  LALT(E)  ┃  LCTRL(I) ┃  LSHFT(O) ┃
+//             ┃     A     ┃  LCTRL(R) ┃  LALT(S)  ┃  LGUI(T)  ┃     G     ┃   ┃     M     ┃  LGUI(N)  ┃  LALT(E)  ┃  LCTRL(I) ┃     O     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃     :     ┃     Z     ┃     X     ┃     C     ┃     D     ┃  V/ALT(U) ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃     '     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
@@ -348,7 +348,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &ht_num N1 Q &ht_num N2 W &ht_num N3 F &ht_num N4 P &ht_num N5 B &ht_num N6 J &ht_num N7 L &ht_num N8 U &ht_num N9 Y &ht_num N0 MINUS
-                &hml LSHFT A &hml LCTRL R &hml LALT S &hml LGUI T &kp G          &kp M       &hmr LGUI N &hmr LALT E &hmr LCTRL I &hmr LSHFT O
+                &kp A       &hml LCTRL R &hml LALT S &hml LGUI T &kp G           &kp M       &hmr LGUI N &hmr LALT E &hmr LCTRL I &kp O
     &mo_colon   &kp Z       &kp X        &kp C       &kp D       &ht_v LA(U) V   &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
                                &kp LS(LC(LA(LGUI))) &lt NAV SPACE &lt NUM TAB    &lt SYM RET &mt LSHFT BSPC &lt FUNC DEL
             >;
