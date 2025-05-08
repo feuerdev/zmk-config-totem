@@ -318,6 +318,14 @@
             key-positions = <15 16>; // M and N keys (home row)
             bindings = <&kp AT>;
         };
+
+        // Bootloader combo
+        combo_bootloader {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <20 31>; // Leftmost and rightmost keys on the bottom row
+            bindings = <&bootloader>;
+        };
     };
 
     keymap {
