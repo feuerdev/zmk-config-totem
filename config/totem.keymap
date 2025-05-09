@@ -232,20 +232,6 @@
             bindings = <&kp DLLR>;
         };
         
-        combo_percent {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <3 4>; // P and B keys
-            bindings = <&kp PRCNT>;
-        };
-        
-        combo_pipe {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <29 30>; // DOT and SLASH keys
-            bindings = <&kp PIPE>;
-        };
-        
         // Square brackets
         combo_lbracket {
             timeout-ms = <COMBO_TERM_FAST>;
@@ -313,27 +299,28 @@
             bindings = <&kp MINUS>;
         };
         
-        // Additional symbol combos
-        combo_tilde {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <26 27>; // K and H keys
-            bindings = <&kp TILDE>;
-        };
-        
-        combo_grave {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <18 19>; // I and O keys (home row)
-            bindings = <&kp GRAVE>;
-        };
-        
         combo_at {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <15 16>; // M and N keys (home row)
             bindings = <&kp AT>;
         };
+
+        // Vertical combos
+        
+        // combo_percent {
+        // combo_pipe {
+        // combo_tilde {
+        // combo_grave {
+        // STAR
+        // CARET
+        // AMPS
+        // EMAIL
+
+        // -------
+        // LEADER
+
+
 
         // Bootloader combo
         combo_bootloader {
@@ -398,11 +385,11 @@ label= "NAV"                              ;
 label= "SYM"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     ^     ┃           ┃     $     ┃     %     ┃           ┃   ┃           ┃     [     ┃     ]     ┃           ┃           ┃
+//             ┃     ^     ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃     *     ┃     -     ┃     +     ┃     =     ┃     #     ┃   ┃     |     ┃     (     ┃     )     ┃     @     ┃     `     ┃
+//             ┃     *     ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃   EMAIL   ┃           ┃     <     ┃     >     ┃     &     ┃           ┃   ┃     ~     ┃     {     ┃     }     ┃           ┃           ┃           ┃
+// ┃       ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
