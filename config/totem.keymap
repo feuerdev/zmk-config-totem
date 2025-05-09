@@ -115,6 +115,22 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         
+        // Left parenthesis / less-than mod-morph
+        mo_lpar: mo_lpar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp LT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        
+        // Right parenthesis / greater-than mod-morph
+        mo_rpar: mo_rpar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        
         // Number row hold-tap
         ht_num: hold_tap_number {
             compatible = "zmk,behavior-hold-tap";
@@ -250,14 +266,14 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <16 17>; // N and E keys (home row)
-            bindings = <&kp LPAR>;
+            bindings = <&mo_lpar>;
         };
         
         combo_rparen {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <17 18>; // E and I keys (home row)
-            bindings = <&kp RPAR>;
+            bindings = <&mo_rpar>;
         };
         
         // Curly braces
@@ -394,7 +410,7 @@ label= "SYM"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp CARET   &trans      &kp DLLR    &kp PRCNT   &trans          &trans      &kp LBKT    &kp RBKT    &trans      &trans
-                &kp STAR    &kp MINUS   &kp PLUS    &kp EQUAL   &kp HASH        &kp PIPE    &kp LPAR    &kp RPAR    &kp AT      &kp GRAVE
+                &kp STAR    &kp MINUS   &kp PLUS    &kp EQUAL   &kp HASH        &kp PIPE    &mo_lpar    &mo_rpar    &kp AT      &kp GRAVE
     &email      &trans      &kp LT      &kp GT      &kp AMPS    &trans          &kp TILDE   &kp LBRC    &kp RBRC    &trans      &trans &trans
                                         &trans &kp LS(LC(LA(LG(SPACE)))) &trans &trans      &trans      &trans
             >;
