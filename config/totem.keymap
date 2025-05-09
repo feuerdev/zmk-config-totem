@@ -307,20 +307,61 @@
         };
 
         // Vertical combos
+        combo_percent {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <3 13>; // P and T keys (index finger, vertical)
+            bindings = <&kp PRCNT>;
+        };
         
-        // combo_percent {
-        // combo_pipe {
-        // combo_tilde {
-        // combo_grave {
-        // STAR
-        // CARET
-        // AMPS
-        // EMAIL
-
-        // -------
-        // LEADER
-
-
+        combo_pipe {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <2 12>; // F and S keys (middle finger, vertical)
+            bindings = <&kp PIPE>;
+        };
+        
+        combo_tilde {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <6 16>; // L and N keys (index finger, vertical)
+            bindings = <&kp TILDE>;
+        };
+        
+        combo_grave {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <7 17>; // U and E keys (middle finger, vertical)
+            bindings = <&kp GRAVE>;
+        };
+        
+        combo_star {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <12 23>; // S and C keys (middle finger, vertical)
+            bindings = <&kp STAR>;
+        };
+        
+        combo_caret {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <17 26>; // E and , keys (middle finger, vertical)
+            bindings = <&kp CARET>;
+        };
+        
+        combo_amps {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <13 24>; // T and D keys
+            bindings = <&kp AMPS>;
+        };
+        
+        combo_email {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <16 17>; // N and H keys
+            bindings = <&email>;
+        };
 
         // Bootloader combo
         combo_bootloader {
