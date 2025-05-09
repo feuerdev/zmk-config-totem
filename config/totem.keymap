@@ -310,56 +310,56 @@
         combo_percent {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <3 13>; // P and T keys (index finger, vertical)
+            key-positions = <3 13>; // P and T keys (index finger left top, vertical)
             bindings = <&kp PRCNT>;
         };
         
         combo_pipe {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <2 12>; // F and S keys (middle finger, vertical)
+            key-positions = <7 17>; // U and E keys (middle finger right top, vertical)
             bindings = <&kp PIPE>;
         };
         
         combo_tilde {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <6 16>; // L and N keys (index finger, vertical)
+            key-positions = <6 16>; // L and N keys (index finger right top, vertical)
             bindings = <&kp TILDE>;
         };
         
         combo_grave {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <7 17>; // U and E keys (middle finger, vertical)
+            key-positions = <16 27>; // N and H keys (index finger right bottom, vertical)
             bindings = <&kp GRAVE>;
         };
         
         combo_star {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <12 23>; // S and C keys (middle finger, vertical)
+            key-positions = <12 23>; // S and C keys (middle finger left bottom, vertical)
             bindings = <&kp STAR>;
         };
         
         combo_caret {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <17 26>; // E and , keys (middle finger, vertical)
+            key-positions = <2 12>; // F and S keys (middle finger left top, vertical) 
             bindings = <&kp CARET>;
         };
         
         combo_amps {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <13 24>; // T and D keys
+            key-positions = <13 24>; // T and D keys (index finger left bottom, vertical)
             bindings = <&kp AMPS>;
         };
         
         combo_email {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <16 17>; // N and H keys
+            key-positions = <16 28>; // E and , keys (middle finger right bottom, vertical)
             bindings = <&email>;
         };
 
