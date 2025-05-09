@@ -359,7 +359,7 @@
         combo_email {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <16 28>; // E and , keys (middle finger right bottom, vertical)
+            key-positions = <17 28>; // E and , keys (middle finger right bottom, vertical)
             bindings = <&email>;
         };
 
