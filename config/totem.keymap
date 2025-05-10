@@ -176,15 +176,15 @@
         };
         
         combo_esc {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <1 2>; // W and F keys
             bindings = <&kp ESC>;
         };
         
         combo_ctrl_c {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <0 1>; // Q and W keys
             bindings = <&kp LC(C)>;
         };
@@ -198,8 +198,8 @@
         };        
         
         combo_cut_alt {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <22 24>; // X and D keys
             bindings = <&kp LG(X)>;
         };
