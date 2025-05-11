@@ -417,7 +417,7 @@ label= "NAV"                              ;
                 &kp LS(LC(LA(LG(Q)))) &kp LS(LC(LA(LG(W)))) &kp LS(LC(LA(LG(F)))) &kp LS(LC(LA(LG(P)))) &kp LS(LC(LA(LG(B))))     &kp LS(LC(LA(J))) &kp LG(GRAVE) &kp UP       &kp LS(LC(LA(Y))) &kp LS(LC(LA(MINUS)))
                 &kp LSFT    &kp LCTRL   &kp LALT    &kp LGUI    &kp LS(LC(LA(LG(G))))     &kp LS(LC(LA(M))) &kp LEFT &kp DOWN &kp RIGHT    &kp LS(LC(LA(O)))
     &kp LS(LC(LA(LG(SEMI)))) &kp LS(LC(LA(LG(Z)))) &kp LS(LC(LA(LG(X)))) &kp LS(LC(LA(LG(C)))) &kp LS(LC(LA(LG(D)))) &kp LS(LC(LA(LG(V))))     &kp LS(LC(LA(K))) &kp LS(LC(LA(H))) &kp LG(LBRC) &kp LG(RBRC) &kp LS(LC(LA(FSLH))) &kp LS(LC(LA(SQT)))
-                                        &trans      &trans      &trans           &kp LS(RET)     &trans        &trans
+                                        &trans      &trans      &trans           &kp LS(RET)   &kp LA(BSPC)  &trans
             >;
         };
 
