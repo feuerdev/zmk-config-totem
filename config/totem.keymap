@@ -357,9 +357,9 @@
         };
         
         combo_email {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <17 28>; // E and , keys (middle finger right bottom, vertical)
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <14 15>; // G and M 
             bindings = <&email>;
         };
 
