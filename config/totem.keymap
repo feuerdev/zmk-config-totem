@@ -137,7 +137,7 @@
             label = "HOLD_TAP_NUMBER";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <170>;
+            tapping-term-ms = <220>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
         };
