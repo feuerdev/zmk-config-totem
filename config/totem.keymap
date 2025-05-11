@@ -364,8 +364,8 @@
 
         // Bootloader combo
         combo_bootloader {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            timeout-ms = <60>;
+            require-prior-idle-ms = <400>;
             key-positions = <20 31>; // Leftmost and rightmost keys on the bottom row
             bindings = <&bootloader>;
         };
