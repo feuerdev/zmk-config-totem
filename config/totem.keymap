@@ -32,8 +32,8 @@
 #define KEYS_R 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 // right-hand keys
 #define THUMBS 32 33 34 35 36 37 // thumb keys
 
-#define COMBO_TERM_FAST 18
-#define COMBO_TERM_SLOW 30
+#define COMBO_TERM_FAST 24
+#define COMBO_TERM_SLOW 40
 
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
@@ -169,7 +169,7 @@
         compatible = "zmk,combos";
         
         combo_capsword {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <10 19>; // A and O keys
             bindings = <&caps_word>;
