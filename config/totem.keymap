@@ -19,9 +19,8 @@
 // Layer definitions
 #define BASE 0
 #define NAV  1
-#define SYM  2
-#define FUNC 3
-#define NUM  4
+#define FUNC 2
+#define NUM  3
 
 // Home row mods macros for Totem (38-key layout)
 // Top row: 0-4 (left), 5-9 (right)
@@ -386,7 +385,7 @@ label= "BASE"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃     :     ┃     Z     ┃     X     ┃     C     ┃     D     ┃  V/ALT(U) ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃     '     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
-//                                     ┃    HYPR   ┃  NAV(SPC) ┃  NUM(TAB) ┃   ┃  SYM(RET) ┃ SFT(BSPC) ┃ FUNC(DEL) ┃
+//                                     ┃    HYPR   ┃  NAV(SPC) ┃  NUM(TAB) ┃   ┃  NUM(RET) ┃ SFT(BSPC) ┃ FUNC(DEL) ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -394,7 +393,7 @@ bindings = <
                 &ht_num N1 Q &ht_num N2 W &ht_num N3 F &ht_num N4 P &ht_num N5 B &ht_num N6 J &ht_num N7 L &ht_num N8 U &ht_num N9 Y &ht_num N0 MINUS
                 &hml LSFT A &hml LCTRL R &hml LALT S &hml LGUI T &kp G           &kp M       &hmr LGUI N &hmr LALT E &hmr LCTRL I &hml LSFT O
     &mo_colon   &kp Z       &kp X        &kp C       &kp D       &ht_v LA(U) V   &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
-                               &kp LS(LC(LA(LGUI))) &lt NAV SPACE &lt NUM TAB    &lt SYM RET &mt LSHFT BSPC &lt FUNC DEL
+                               &kp LS(LC(LA(LGUI))) &lt NAV SPACE &lt NUM TAB    &lt NUM RET &mt LSHFT BSPC &lt FUNC DEL
             >;
         };
 
@@ -418,29 +417,6 @@ label= "NAV"                              ;
                 &kp LSFT    &kp LCTRL   &kp LALT    &kp LGUI    &kp LS(LC(LA(LG(G))))     &kp LS(LC(LA(M))) &kp LEFT &kp DOWN &kp RIGHT    &kp LS(LC(LA(O)))
     &kp LS(LC(LA(LG(SEMI)))) &kp LS(LC(LA(LG(Z)))) &kp LS(LC(LA(LG(X)))) &kp LS(LC(LA(LG(C)))) &kp LS(LC(LA(LG(D)))) &kp LS(LC(LA(LG(V))))     &kp LS(LC(LA(K))) &kp LS(LC(LA(H))) &kp LG(LBRC) &kp LG(RBRC) &kp LS(LC(LA(FSLH))) &kp LS(LC(LA(SQT)))
                                         &trans      &trans      &trans           &kp LS(RET)   &mt LSHFT LA(BSPC)  &trans
-            >;
-        };
-
-        sym_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "SYM"                              ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
-//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
-// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
-// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
-//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
-
-                &kp CARET   &trans      &kp DLLR    &kp PRCNT   &trans          &trans      &kp LBKT    &kp RBKT    &trans      &trans
-                &kp STAR    &kp MINUS   &kp PLUS    &kp EQUAL   &kp HASH        &kp PIPE    &mo_lpar    &mo_rpar    &kp AT      &kp GRAVE
-    &email      &trans      &kp LT      &kp GT      &kp AMPS    &trans          &kp TILDE   &kp LBRC    &kp RBRC    &trans      &trans &trans
-                                        &trans &kp LS(LC(LA(LG(SPACE)))) &trans &trans      &trans      &trans
             >;
         };
 
