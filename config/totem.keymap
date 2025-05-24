@@ -444,7 +444,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &ht_num N1 Q &ht_num N2 W &ht_num N3 F &ht_num N4 P &ht_num N5 B &ht_num N6 J &ht_num N7 L &ht_num N8 U &ht_num N9 Y &ht_num N0 MINUS
-                &hml LSFT A &hml LCTRL R &hml LALT S &hml LGUI T &kp G           &kp M       &hmr LGUI N &hmr LALT E &hmr LCTRL I &hml LSFT O
+                &hml LSFT A &hml LCTRL R &hml LALT S &hml LGUI T &kp G           &kp M       &hmr LGUI N &hmr LALT E &hmr LCTRL I &hmr LSFT O
     &mo_colon   &kp Z       &kp X        &kp C       &kp D       &ht_v LA(U) V   &kp K       &kp H       &mo_comma   &mo_dot     &mo_slash   &kp SQT
                                &kp LS(LC(LA(LGUI))) &lt NAV SPACE &kp TAB        &lt NUM RET &ht_shift LSHFT BSPC &lt FUNC DEL
             >;
@@ -466,7 +466,7 @@ label= "NAV"                              ;
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp LS(LC(LA(LG(Q)))) &kp LS(LC(LA(LG(W)))) &kp LS(LC(LA(LG(F)))) &kp LS(LC|(LA(LG(P)))) &kp LS(LC(LA(LG(B))))     &kp LS(LC(LA(J))) &kp LG(GRAVE) &kp UP       &kp LS(LC(LA(Y))) &kp LS(LC(LA(MINUS)))
+                &kp LS(LC(LA(LG(Q)))) &kp LS(LC(LA(LG(W)))) &kp LS(LC(LA(LG(F)))) &kp LS(LC(LA(LG(P)))) &kp LS(LC(LA(LG(B))))     &kp LS(LC(LA(J))) &kp LG(GRAVE) &kp UP       &kp LS(LC(LA(Y))) &kp LS(LC(LA(MINUS)))
                 &kp LSFT    &kp LCTRL   &kp LALT    &kp LGUI    &kp LS(LC(LA(LG(G))))     &kp LS(LC(LA(M))) &kp LEFT &kp DOWN &kp RIGHT    &kp LS(LC(LA(O)))
     &kp LS(LC(LA(LG(SEMI)))) &kp LS(LC(LA(LG(Z)))) &kp LS(LC(LA(LG(X)))) &kp LS(LC(LA(LG(C)))) &kp LS(LC(LA(LG(D)))) &kp LS(LC(LA(LG(V))))     &kp LS(LC(LA(K))) &kp LS(LC(LA(H))) &kp LG(LBRC) &kp LG(RBRC) &kp LS(LC(LA(FSLH))) &kp LS(LC(LA(SQT)))
                                         &trans      &trans      &trans           &kp LS(RET)   &ht_shift LSHFT LA(BSPC)  &LA(DEL)
