@@ -515,20 +515,20 @@ label= "WINDOWS"                              ;
 label= "GAME"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     P     ┃     Q     ┃     W     ┃     E     ┃     R     ┃   ┃     T     ┃     Y     ┃     U     ┃     I     ┃     O     ┃
+//             ┃    TAB    ┃     Q     ┃     W     ┃     E     ┃     R     ┃   ┃     T     ┃     Y     ┃     U     ┃     I     ┃     O     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃     L     ┃     A     ┃     S     ┃     D     ┃     F     ┃   ┃     G     ┃     H     ┃     J     ┃     K     ┃     ;     ┃
+//             ┃   SHIFT   ┃     A     ┃     S     ┃     D     ┃     F     ┃   ┃     G     ┃     H     ┃     J     ┃     K     ┃     ;     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃   SHIFT   ┃     M     ┃     Z     ┃     X     ┃     C     ┃     V     ┃   ┃     B     ┃     N     ┃     ,     ┃     .     ┃     -     ┃     '     ┃
+// ┃    ESC    ┃   CTRL    ┃     Z     ┃     X     ┃     C     ┃     V     ┃   ┃     B     ┃     N     ┃     ,     ┃     .     ┃     -     ┃     '     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃    CTRL   ┃    SPC    ┃    TAB    ┃   ┃    ENT    ┃    BSPC   ┃    DEL    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp P       &kp Q       &kp W       &kp E       &kp R             &kp T       &kp Y       &kp U       &kp I       &kp O
-                &kp L       &kp A       &kp S       &kp D       &kp F             &kp G       &kp H       &kp J       &kp K       &kp SEMI
-    &kp LSHFT   &kp M       &kp Z       &kp X       &kp C       &kp V             &kp B       &kp N       &kp COMMA   &kp DOT     &kp MINUS   &kp SQT
+                &kp TAB     &kp Q       &kp W       &kp E       &kp R             &kp T       &kp Y       &kp U       &kp I       &kp O
+                &kp LSHFT   &kp A       &kp S       &kp D       &kp F             &kp G       &kp H       &kp J       &kp K       &kp SEMI
+    &kp ESC     &kp LCTRL   &kp Z       &kp X       &kp C       &kp V             &kp B       &kp N       &kp COMMA   &kp DOT     &kp MINUS   &kp SQT
                                         &kp LCTRL   &kp SPACE   &kp TAB           &kp RET     &kp BSPC    &kp DEL
             >;
         };
