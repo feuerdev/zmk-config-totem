@@ -302,13 +302,6 @@
             bindings = <&kp PLUS>;
         };
         
-        combo_minus {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <10 11>; // A and R keys
-            bindings = <&kp MINUS>;
-        };
-        
         combo_at {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
