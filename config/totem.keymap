@@ -383,6 +383,22 @@
             bindings = <&kp GRAVE>;
         };
 
+        // Star/asterisk combo
+        combo_star_fu {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <2 7>; // F and U keys
+            bindings = <&kp STAR>;
+        };
+
+        // Plus combo
+        combo_plus_comma_c {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <28 23>; // comma and C keys
+            bindings = <&kp PLUS>;
+        };
+
         // Toggle GAME layer combo
         combo_toggle_game {
             timeout-ms = <50>;
