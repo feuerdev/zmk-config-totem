@@ -378,7 +378,7 @@
         // Grave/backtick combo  
         combo_grave_dh {
             timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <24 27>; // D and H keys
             bindings = <&kp GRAVE>;
         };
