@@ -1,0 +1,7 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Always offer to git commit with a semantic release commit message.
+Always offer to push after.
