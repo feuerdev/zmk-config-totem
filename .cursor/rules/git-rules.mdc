@@ -4,4 +4,5 @@ globs:
 alwaysApply: true
 ---
 Always offer to git commit with a semantic release commit message.
+Always give me a preview of the commit message.
 Always offer to push after.
