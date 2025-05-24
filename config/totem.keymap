@@ -21,7 +21,7 @@
 #define NAV  1
 #define FUNC 2
 #define NUM  3
-#define GAME 4
+#define WINDOWS 4
 
 // Home row mods macros for Totem (38-key layout)
 // Top row: 0-4 (left), 5-9 (right)
@@ -379,7 +379,7 @@
             timeout-ms = <50>;
             require-prior-idle-ms = <100>;
             key-positions = <0 9>; // Q and - keys (top outside keys)
-            bindings = <&tog GAME>;
+            bindings = <&tog WINDOWS>;
         };
     };
 
@@ -478,9 +478,9 @@ label= "NUM"                              ;
             >;
         };
 
-        game_layer {
+        windows_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "GAME"                              ;
+label= "WINDOWS"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     Q     ┃     W     ┃     E     ┃     R     ┃     T     ┃   ┃     Z     ┃     U     ┃     I     ┃     O     ┃     P     ┃
