@@ -367,6 +367,22 @@
             bindings = <&email>;
         };
 
+        // Ampersand combo
+        combo_ampersand {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <3 6>; // P and L keys
+            bindings = <&kp AMPS>;
+        };
+
+        // Grave/backtick combo  
+        combo_grave_dh {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <24 27>; // D and H keys
+            bindings = <&kp GRAVE>;
+        };
+
         // Toggle GAME layer combo
         combo_toggle_game {
             timeout-ms = <50>;
