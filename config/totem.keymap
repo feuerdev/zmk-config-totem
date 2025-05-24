@@ -22,6 +22,7 @@
 #define FUNC 2
 #define NUM  3
 #define WINDOWS 4
+#define GAME 5
 
 // Home row mods macros for Totem (38-key layout)
 // Top row: 0-4 (left), 5-9 (right)
@@ -366,6 +367,14 @@
             bindings = <&email>;
         };
 
+        // Toggle GAME layer combo
+        combo_toggle_game {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
+            key-positions = <21 30>; // Z and / keys 
+            bindings = <&tog GAME>;
+        };
+
         // Bootloader combo
         combo_bootloader {
             timeout-ms = <60>;
@@ -497,6 +506,29 @@ label= "WINDOWS"                              ;
                 &kp Q       &kp W       &kp E       &kp R       &kp T             &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp A       &kp S       &kp D       &kp F       &kp G             &kp H       &kp J       &kp K       &kp L       &kp SEMI
     &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B             &kp N       &kp M       &kp COMMA   &kp DOT     &kp MINUS   &kp SQT
+                                        &kp LCTRL   &kp SPACE   &kp TAB           &kp RET     &kp BSPC    &kp DEL
+            >;
+        };
+
+        game_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "GAME"                              ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃     P     ┃     Q     ┃     W     ┃     E     ┃     R     ┃   ┃     T     ┃     Y     ┃     U     ┃     I     ┃     O     ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃     L     ┃     A     ┃     S     ┃     D     ┃     F     ┃   ┃     G     ┃     H     ┃     J     ┃     K     ┃     ;     ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃   SHIFT   ┃     M     ┃     Z     ┃     X     ┃     C     ┃     V     ┃   ┃     B     ┃     N     ┃     ,     ┃     .     ┃     -     ┃     '     ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
+//                                     ┃    CTRL   ┃    SPC    ┃    TAB    ┃   ┃    ENT    ┃    BSPC   ┃    DEL    ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+            bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷ - ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &kp P       &kp Q       &kp W       &kp E       &kp R             &kp T       &kp Y       &kp U       &kp I       &kp O
+                &kp L       &kp A       &kp S       &kp D       &kp F             &kp G       &kp H       &kp J       &kp K       &kp SEMI
+    &kp LSHFT   &kp M       &kp Z       &kp X       &kp C       &kp V             &kp B       &kp N       &kp COMMA   &kp DOT     &kp MINUS   &kp SQT
                                         &kp LCTRL   &kp SPACE   &kp TAB           &kp RET     &kp BSPC    &kp DEL
             >;
         };
