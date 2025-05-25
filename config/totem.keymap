@@ -369,15 +369,15 @@
 
         // Ampersand combo
         combo_ampersand {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <3 6>; // P and L keys
             bindings = <&kp AMPS>;
         };
 
-        // Grave/backtick combo  
+        // Backtick combo  
         combo_grave_dh {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <24 27>; // D and H keys
             bindings = <&kp GRAVE>;
@@ -385,16 +385,16 @@
 
         // Star/asterisk combo
         combo_star_fu {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <2 7>; // F and U keys
             bindings = <&kp STAR>;
         };
 
         // Plus combo
         combo_plus_comma_c {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <28 23>; // comma and C keys
             bindings = <&kp PLUS>;
         };
@@ -415,8 +415,8 @@
             bindings = <&bootloader>;
         };
 
-        // Gaming/Windows layer toggle
-        combo_toggle_gaming {
+        // QWERTZ layer toggle
+        combo_toggle_qwertz {
             timeout-ms = <50>;
             require-prior-idle-ms = <100>;
             key-positions = <0 9>; // Q and - keys (top outside keys)
@@ -457,9 +457,9 @@ label= "NAV"                              ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃  ALL+Q    ┃  ALL+W    ┃  FINDER   ┃CMD PALETTE┃  ALL+B    ┃   ┃ GO TO DEF ┃ SWITCH WIN┃     UP    ┃ L SIDEBAR ┃ R SIDEBAR ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃   LSFT    ┃   LCTRL   ┃   LALT    ┃   LGUI    ┃  ALL+G    ┃   ┃NEXT LAYOUT┃   LEFT    ┃   DOWN    ┃   RIGHT   ┃   MEH+O   ┃
+//             ┃   LSFT    ┃   LCTRL   ┃   LALT    ┃   LGUI    ┃  ALL+G    ┃   ┃ SPOTLIGHT ┃   LEFT    ┃   DOWN    ┃   RIGHT   ┃   MEH+O   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃  ALL+SEMI ┃  SPOTIFY  ┃  SLACK    ┃  CHROME   ┃  CURSOR   ┃  ALL+V    ┃   ┃  MEH+K    ┃ MOUSE CTRL┃ PREV TAB  ┃  NEXT TAB ┃ BOTTOM BAR┃  MEH+SQT  ┃
+// ┃  ALL+SEMI ┃  SPOTIFY  ┃  SLACK    ┃  CHROME   ┃  CURSOR   ┃  ALL+V    ┃   ┃ MOUSE CTL2┃ MOUSE CTL1┃ PREV TAB  ┃  NEXT TAB ┃ BOTTOM BAR┃MOUSESCROLL┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃ SHFT+RET  ┃ ALT+BSPC  ┃ ALT+DEL   ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
